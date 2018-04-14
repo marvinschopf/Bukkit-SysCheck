@@ -8,7 +8,8 @@ class SysCheckCommand: CommandExecutor {
     val prefix: String = "§6[§3SysCheck§6]§f"
 
     fun getMessages(): List<String> {
-        return listOf("RAM: " + Runtime.getRuntime().freeMemory() + "M/" + Runtime.getRuntime().totalMemory() + "M")
+        return listOf("RAM: " + Runtime.getRuntime().freeMemory() + "M/" + Runtime.getRuntime().maxMemory() + "M",
+                "Proc.'s available: " + Runtime.getRuntime().availableProcessors())
     }
     override fun onCommand(sender: CommandSender?, p1: Command?, p2: String?, p3: Array<out String>?): Boolean {
         if(sender!!.hasPermission("syscheck")) {
