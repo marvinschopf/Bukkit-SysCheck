@@ -1,0 +1,10 @@
+name: SysCheck
+version: 1.0
+main: de.marvnet.minecraft.syscheck.SysCheck
+commands:
+  syscheck:
+    description: Check the system
+    aliases: ["sys"]
+permissions:
+  syscheck:
+    description: Main permission for SysCheck
